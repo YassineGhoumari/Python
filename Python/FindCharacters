@@ -1,0 +1,8 @@
+def findchar(word_list,char):
+    mylist=[]
+    for word in word_list:
+        if char in word:
+           mylist.append (word)
+    return mylist
+
+print findchar (['hello','world','my','name','is','Anna','good'],'a')
