@@ -1,0 +1,4 @@
+a = 30
+arr = [a,'b','c','d','e','f','g','h']
+for i in range(2,len(arr)):
+    print "This is an index: ", i, arr[i] # arr[2] arr[3] arr[4] arr[5]
