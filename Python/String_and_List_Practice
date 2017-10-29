@@ -1,0 +1,22 @@
+str = "It's thanksgiving day. It's my birthday,too!"
+print str.find("day")
+print str.replace("day", "month")
+
+x = [2,54,-2,7,12,98]
+print max(x)
+print min(x)
+
+x = ["hello",2,54,-2,7,12,98,"world"]
+print x[0]
+print x[-1]
+y = [x[0],x[-1]]
+print y
+
+a = [19,2,54,-2,7,12,98,32,10,-3,6]
+a.sort()
+print a
+b = []
+for c in a:
+    if c < 0:
+        b.append(c)
+print b
