@@ -1,0 +1,15 @@
+def coinToss(num):
+    import random
+    head = 0
+    tail = 0
+    toss = 1
+    while toss < num + 1:
+        if round(random.random()) == 1:
+            head = head + 1
+            print "Attempt #",toss,": Throwing a coin... It's a head! ... Got", head, "head(s) so far and", tail, "tail(s) so far."
+            toss = toss + 1
+        else:
+            tail = tail + 1
+            print "Attempt #",toss,": Throwing a coin... It's a tail! ... Got", head, "head(s) so far and", tail, "tail(s) so far."
+            toss = toss + 1
+coinToss(5000)
