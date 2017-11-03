@@ -1,0 +1,5 @@
+dict = {'Name':'Yassine', 'Age': 22, 'Birth': 'Morocco', 'Language': 'Java'}
+print "My name is ",dict['Name']
+print "My age is  ", dict['Age']
+print "My country of birth is ", dict['Birth']
+print "My favorite language is ", dict['Language']
