@@ -1,0 +1,4 @@
+keys = ['Anna', 'Eli', 'Pariece','Brendan', 'Amy', 'Shane','Oscar']
+values = ['horse', 'cat', 'spider', 'giraffe', 'ticks', 'dolphins', 'llamas']
+dictionary = dict(zip(keys, values))
+print(dictionary)
