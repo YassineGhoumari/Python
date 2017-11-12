@@ -1,0 +1,22 @@
+<html>
+
+  <head>
+    title>Survey Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='survey.css')}}">
+
+  </head>
+
+  <body>
+
+    <div class="main">
+  		<h1>Submitted Info</h1>
+  		<p>Your Name: {{ name }}</p>
+  		<p>Dojo Location: {{ location }}</p>
+  		<p>Favorite Language: {{ favlang }}</p>
+  		<p>Comment: {{ comments }}</p>
+      <input class="one" type="submit" name="submit">
+  	</div>
+
+  </body>
+
+</html>
