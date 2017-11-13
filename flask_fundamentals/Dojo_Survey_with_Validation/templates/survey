@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Survey Home Page</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='survey.css')}}">
+</head>
+<body>
+	<div class="main">
+		<form action='/inf' method='post'>
+			Your Name:
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					{% for message in messages %}
+						<p>{{message}}</p>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+			<input class="one" type="text" name="name"><br>
+			Dojo Location:
+			<select class="one" name="xyz">
+				<option value="dc">DC</option>
+				<option value="seattle">Seattle</option>
+			</select><br>
+			Favorite Language: <select class="one" name="favlang">
+				<option value="html">HTML</option>
+				<option value="css">CSS</option>
+				<option value="js">JavaScript</option>
+			</select><br>
+			<input id="text" class="one" type="textarea" name="comm"><br>
+			<input class="one" type="submit" name="submit">
+		</form>
+	</div>
+</body>
+</html>
