@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Great Number Game WIN</title>
+</head>
+<body>
+	<div style="margin-left:500px">
+		<h1>YOU GOT IT!</h1>
+		<form action="/index2" method="post">
+			<input type="submit" name="button" value="PLAY AGAIN?">
+		</form>
+	</div>
+</body>
+</html>
