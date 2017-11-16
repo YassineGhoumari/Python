@@ -1,0 +1,15 @@
+<html>
+
+  <head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css1.css')}}">
+  </head>
+
+  <body>
+
+    <h1>Ninja were professional spies during the age of the samurai. Their origins go back to the twelfth century, when the samurai
+       class began to gain power. When the scale of fighting increased in the fourteenth century, it became necessary
+       to conduct espionage activities against enemy forces, and ninja became even more active.</h1>
+
+  </body>
+
+</html>
