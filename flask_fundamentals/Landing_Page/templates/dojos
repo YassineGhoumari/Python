@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css1.css')}}">
+	 <title>Dojo Form</title>
+
+</head>
+
+<body>
+
+	<form>
+
+		 First Name: <input type="text" name="first">
+
+		 Last Name: <input type="text" name="last">
+
+		 <input type="submit" name="submit">
+
+	</form>
+
+</body>
+
+</html>
