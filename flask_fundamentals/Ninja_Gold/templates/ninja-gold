@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ninja Gold</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='ninjagold.css')}}">
+</head>
+<body>
+	<div class="cont">
+		<h3>YOUR GOLD: {{session['gold']}}</h3>
+		<div class="one">
+				<h3>FARM</h3>
+				<p>(Earns 10-20 gold)</p>
+				<form action="/gold" method="post">
+					<input type="hidden" name="build" value="farm">
+					<input type="submit" value="FIND GOLD!">
+				</form>
+		</div>
+		<div class="one">
+				<h3>CAVE</h3>
+				<p>(Earns 5-10 gold)</p>
+				<form action="/gold" method="post">
+					<input type="hidden" name="build" value="cave">
+					<input type="submit" value="FIND GOLD!">
+				</form>
+		</div>
+		<div class="one">
+				<h3>HOUSE</h3>
+				<p>(Earns 2-5 gold)</p>
+				<form action="/gold" method="post">
+					<input type="hidden" name="build" value="house">
+					<input type="submit" value="FIND GOLD!">
+				</form>
+		</div>
+		<div class="one">
+				<h3>CASINO</h3>
+				<p>(Earns/Takes 0-50 gold)</p>
+				<form action="/gold" method="post">
+					<input type="hidden" name="build" value="casino">
+					<input type="submit" value="FIND GOLD!">
+				</form>
+		</div>
+		<div>
+			<h3>Activities</h3><br>
+			<div class="act">
+			    {% for item in session['sents']: %}
+				<p id="text">{{item}}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
