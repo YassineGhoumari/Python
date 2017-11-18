@@ -1,0 +1,41 @@
+from flask import Flask, render_template, request, redirect, flash
+app = Flask(__name__)
+app.secret_key = 'Yassine'
+
+@app.route('/')
+def index():
+  return render_template("index.html")
+
+@app.route('/inf', methods=['POST'])
+def createuser():
+    errors = []
+    if len(request.form['first']) < 1:
+        errors.append("First Name cannot be empty!")
+        # return redirect('/')
+    if len(request.form['last']) < 1:
+        errors.append("Last Name cannot be empty!")
+        # return redirect('/')
+    if len(request.form['email']) < 1:
+        errors.append("Email cannot be empty!")
+        # return redirect('/')
+    if len(request.form['password']) <8:
+        errors.append("Password must be 8 characters or more")
+    if not len(request.form['confirm']) == len(request.form['password']):
+        errors.append("password must match Confirm Password")
+
+    if len(errors) > 0:
+        for i in range(0,len(errors)):
+            print flash(errors[i])
+        return redirect('/')
+    # return (False, errors)
+
+    else:
+        first= request.form['first']
+        last = request.form['last']
+        email = request.form['email']
+        password = request.form['password']
+        confirm = request.form['confirm']
+
+    return render_template('index.html', first = first, last = last, email = email, password = password, confirm = confirm)
+
+app.run(debug=True)
