@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Survey</title>
+</head>
+<body>
+    <fieldset>
+      <legend>Survey Results</legend>
+      <!-- {{ session.results }} -->
+      <p>Name: {{ session.results["name"] }}</p>
+      <p>Location: {{ session.results["location"] }}</p>
+      <p>Language: {{ session.results["language"] }}</p>
+      <p>Comment: {{ session.results["comment"] }}</p>
+      <a href="/"><button>Go Back</button></a>
+    </fieldset>
+
+
+
+
+
+
+</body>
+</html>
