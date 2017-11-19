@@ -1,0 +1,46 @@
+/<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <h1>Dojo Survey<h1>
+    <fieldset>
+        <legen>Dojo Survey</legend>
+        <form action="/survey" method="post">
+            Name: <input type="text" name="name" placeholder="Your name: ">
+            Location: <select name="location">
+                <option>Seattle</option>
+                <option>San Jose</option>
+                <option>Burbank</option>
+                <option>Tulsa</option>
+                <option>Dallas</option>
+                <option>Chicago</option>
+                <option>DC</option>
+            </select><br>
+            Language: <select name="language">
+                <option>HTML</option>
+                <option>JavaScript</option>
+                <option>Python</option>
+                <option>Python</option>
+                <option>C#</option>
+                <option>Java</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>Fortran</option>
+            </select><br>
+            Comment:<br><textarea name="comment" placeholder="Your comment:"></textarea><br>
+            <input type="submit" value="Submit Survey">
+        </form>
+    </fieldset>
+
+    {% with messages = get_flashed_messages() %}
+        {%if messages %}
+            {% for message in messages %}
+                <h4 style="color:red;">{{message}}</h4>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</body>
+</html>
